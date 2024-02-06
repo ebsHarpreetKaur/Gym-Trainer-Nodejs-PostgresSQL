@@ -1,0 +1,171 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "mindgrowth"
+        }
+    ],
+    "info": {
+        "name": "MindGrowth Documentation",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_postman_id": "dcfb4576-04d1-491a-b1ec-392f284cb447"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "item": [
+                {
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "user/register",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/user/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": null,
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "user/userlist",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/user/userlist"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": null,
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "application/json; charset=utf-8"
+                                }
+                            ],
+                            "code": 201,
+                            "body": "[\n    {\n        \"id\": 1,\n        \"username\": \"alia\",\n        \"password\": \"123456\",\n        \"createdAt\": \"2024-02-06\",\n        \"updatedAt\": \"2024-02-06\"\n    },\n    {\n        \"id\": 2,\n        \"username\": \"alais\",\n        \"password\": \"$2b$10$mpxIkBn.tJCzkfSvIvUyo.y5F4dbhmbeVrwJtrMQJaRb7eQQalzH6\",\n        \"createdAt\": \"2024-02-06\",\n        \"updatedAt\": \"2024-02-06\"\n    },\n    {\n        \"id\": 3,\n        \"username\": \"john\",\n        \"password\": \"$2b$10$C7KYJCQK9uxCYQ22ZOFupuGcP.hvl1TuTsjj74ka4HM3kLPwBx.sC\",\n        \"createdAt\": \"2024-02-06\",\n        \"updatedAt\": \"2024-02-06\"\n    },\n    {\n        \"id\": 4,\n        \"username\": \"ibhra\",\n        \"password\": \"$2b$10$1GQy4bKYTNm699NdQjWVbO.Ulkn9ukmWVw92ANnnEaeqmeFFWi42K\",\n        \"createdAt\": \"2024-02-06\",\n        \"updatedAt\": \"2024-02-06\"\n    }\n]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "user/login",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/user/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": null,
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "user/secure-route",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/user/secure-route"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": null,
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "text/html; charset=utf-8"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>TypeError: Cannot read properties of undefined (reading &#39;split&#39;)<br> &nbsp; &nbsp;at module.exports (D:\\MindGrowth Backend\\api\\middleware\\authenticate.js:5:43)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (D:\\MindGrowth Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)<br> &nbsp; &nbsp;at next (D:\\MindGrowth Backend\\node_modules\\express\\lib\\router\\route.js:144:13)<br> &nbsp; &nbsp;at Route.dispatch (D:\\MindGrowth Backend\\node_modules\\express\\lib\\router\\route.js:114:3)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (D:\\MindGrowth Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)<br> &nbsp; &nbsp;at D:\\MindGrowth Backend\\node_modules\\express\\lib\\router\\index.js:284:15<br> &nbsp; &nbsp;at Function.process_params (D:\\MindGrowth Backend\\node_modules\\express\\lib\\router\\index.js:346:12)<br> &nbsp; &nbsp;at next (D:\\MindGrowth Backend\\node_modules\\express\\lib\\router\\index.js:280:10)<br> &nbsp; &nbsp;at Function.handle (D:\\MindGrowth Backend\\node_modules\\express\\lib\\router\\index.js:175:3)<br> &nbsp; &nbsp;at router (D:\\MindGrowth Backend\\node_modules\\express\\lib\\router\\index.js:47:12)</pre>\n</body>\n</html>\n",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

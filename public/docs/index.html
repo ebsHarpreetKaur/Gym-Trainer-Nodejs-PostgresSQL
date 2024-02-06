@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MindGrowth Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="css/theme-default.print.css" media="print">
+    <script src="js/theme-default-2.0.2.js"></script>
+
+    <link rel="stylesheet"
+          href="//unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/obsidian.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.2/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <script>
+    var baseUrl = "http://mindgrowth/docs";
+    </script>
+    <script src="js/tryitout-2.0.2.js"></script>
+    
+</head>
+
+<body data-languages="[&#34;bash&#34;,&#34;javascript&#34;]">
+<a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="navbar-image" />
+      </span>
+</a>
+<div class="tocify-wrapper">
+    
+    
+        <div class="lang-selector">
+            
+                <a href="#" data-language-name="bash">bash</a>
+            
+                <a href="#" data-language-name="javascript">javascript</a>
+            
+        </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+    <ul class="search-results"></ul>
+
+    <ul id="toc">
+    </ul>
+
+    
+        <ul class="toc-footer" id="toc-footer">
+            
+                <li><a href="collection.json">View Postman collection</a></li>
+            
+                <li><a href="http://github.com/knuckleswtf/scribe-js">Documentation powered by Scribe ✍</a></li>
+            
+        </ul>
+    
+        <ul class="toc-footer" id="last-updated">
+            <li>Last updated: February 6, 2024</li>
+        </ul>
+</div>
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<blockquote>
+  <p>Base URL:</p>
+</blockquote>
+<pre><code class="yaml language-yaml">http://mindgrowth/docs
+</code></pre>
+
+        <h1 id="authenticatingrequests">Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        
+    <h1 id="Endpoints">Endpoints</h1>
+    <p>
+        
+    </p>
+
+    
+        
+<h2 id="Endpoints-POST-user-register">POST /user/register</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-POST-user-register">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request POST \
+    "http://mindgrowth/docs/user/register"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://mindgrowth/docs/user/register"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-POST-user-register">
+
+</span>
+<span id="execution-results-POST-user-register" hidden>
+    <blockquote>Received response<span id="execution-response-status-POST-user-register"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POST-user-register"></code></pre>
+</span>
+<span id="execution-error-POST-user-register" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POST-user-register"></code></pre>
+</span>
+
+<form id="form-POST-user-register"
+      data-method="POST"
+      data-path="/user/register"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POST-user-register', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-POST-user-register"
+            onclick="tryItOut('POST-user-register');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-POST-user-register"
+            onclick="cancelTryOut('POST-user-register');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-POST-user-register" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-black">POST</small>
+
+
+    <b><code>/user/register</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-GET-user-userlist">GET /user/userlist</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-user-userlist">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://mindgrowth/docs/user/userlist"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://mindgrowth/docs/user/userlist"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-user-userlist">
+
+
+<blockquote>Example response (201):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">[
+    {
+        "id": 1,
+        "username": "alia",
+        "password": "123456",
+        "createdAt": "2024-02-06",
+        "updatedAt": "2024-02-06"
+    },
+    {
+        "id": 2,
+        "username": "alais",
+        "password": "$2b$10$mpxIkBn.tJCzkfSvIvUyo.y5F4dbhmbeVrwJtrMQJaRb7eQQalzH6",
+        "createdAt": "2024-02-06",
+        "updatedAt": "2024-02-06"
+    },
+    {
+        "id": 3,
+        "username": "john",
+        "password": "$2b$10$C7KYJCQK9uxCYQ22ZOFupuGcP.hvl1TuTsjj74ka4HM3kLPwBx.sC",
+        "createdAt": "2024-02-06",
+        "updatedAt": "2024-02-06"
+    },
+    {
+        "id": 4,
+        "username": "ibhra",
+        "password": "$2b$10$1GQy4bKYTNm699NdQjWVbO.Ulkn9ukmWVw92ANnnEaeqmeFFWi42K",
+        "createdAt": "2024-02-06",
+        "updatedAt": "2024-02-06"
+    }
+]</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-user-userlist" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-user-userlist"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-user-userlist"></code></pre>
+</span>
+<span id="execution-error-GET-user-userlist" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-user-userlist"></code></pre>
+</span>
+
+<form id="form-GET-user-userlist"
+      data-method="GET"
+      data-path="/user/userlist"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-user-userlist', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-user-userlist"
+            onclick="tryItOut('GET-user-userlist');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-user-userlist"
+            onclick="cancelTryOut('GET-user-userlist');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-user-userlist" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/user/userlist</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-POST-user-login">POST /user/login</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-POST-user-login">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request POST \
+    "http://mindgrowth/docs/user/login"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://mindgrowth/docs/user/login"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-POST-user-login">
+
+</span>
+<span id="execution-results-POST-user-login" hidden>
+    <blockquote>Received response<span id="execution-response-status-POST-user-login"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POST-user-login"></code></pre>
+</span>
+<span id="execution-error-POST-user-login" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POST-user-login"></code></pre>
+</span>
+
+<form id="form-POST-user-login"
+      data-method="POST"
+      data-path="/user/login"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POST-user-login', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-POST-user-login"
+            onclick="tryItOut('POST-user-login');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-POST-user-login"
+            onclick="cancelTryOut('POST-user-login');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-POST-user-login" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-black">POST</small>
+
+
+    <b><code>/user/login</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-GET-user-secure-route">GET /user/secure-route</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-user-secure-route">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://mindgrowth/docs/user/secure-route"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://mindgrowth/docs/user/secure-route"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-user-secure-route">
+
+
+<blockquote>Example response (500):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+content-security-policy: default-src 'none'
+x-content-type-options: nosniff
+content-type: text/html; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>TypeError: Cannot read properties of undefined (reading &#39;split&#39;)<br> &nbsp; &nbsp;at module.exports (D:\MindGrowth Backend\api\middleware\authenticate.js:5:43)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (D:\MindGrowth Backend\node_modules\express\lib\router\layer.js:95:5)<br> &nbsp; &nbsp;at next (D:\MindGrowth Backend\node_modules\express\lib\router\route.js:144:13)<br> &nbsp; &nbsp;at Route.dispatch (D:\MindGrowth Backend\node_modules\express\lib\router\route.js:114:3)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (D:\MindGrowth Backend\node_modules\express\lib\router\layer.js:95:5)<br> &nbsp; &nbsp;at D:\MindGrowth Backend\node_modules\express\lib\router\index.js:284:15<br> &nbsp; &nbsp;at Function.process_params (D:\MindGrowth Backend\node_modules\express\lib\router\index.js:346:12)<br> &nbsp; &nbsp;at next (D:\MindGrowth Backend\node_modules\express\lib\router\index.js:280:10)<br> &nbsp; &nbsp;at Function.handle (D:\MindGrowth Backend\node_modules\express\lib\router\index.js:175:3)<br> &nbsp; &nbsp;at router (D:\MindGrowth Backend\node_modules\express\lib\router\index.js:47:12)</pre>
+</body>
+</html>
+</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-user-secure-route" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-user-secure-route"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-user-secure-route"></code></pre>
+</span>
+<span id="execution-error-GET-user-secure-route" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-user-secure-route"></code></pre>
+</span>
+
+<form id="form-GET-user-secure-route"
+      data-method="GET"
+      data-path="/user/secure-route"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-user-secure-route', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-user-secure-route"
+            onclick="tryItOut('GET-user-secure-route');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-user-secure-route"
+            onclick="cancelTryOut('GET-user-secure-route');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-user-secure-route" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/user/secure-route</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+
+
+        
+    </div>
+    <div class="dark-box">
+        
+            <div class="lang-selector">
+                
+                    <a href="#" data-language-name="bash">bash</a>
+                
+                    <a href="#" data-language-name="javascript">javascript</a>
+                
+            </div>
+        
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var languages = ["bash","javascript"];
+        setupLanguages(languages);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+name: Endpoints
+endpoints:
+  - uri: /user/register
+    httpMethods:
+      - POST
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
+  - uri: /user/userlist
+    httpMethods:
+      - GET
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses:
+      - status: 201
+        description: ''
+        headers:
+          content-type: application/json; charset=utf-8
+        content: |-
+          [
+              {
+                  "id": 1,
+                  "username": "alia",
+                  "password": "123456",
+                  "createdAt": "2024-02-06",
+                  "updatedAt": "2024-02-06"
+              },
+              {
+                  "id": 2,
+                  "username": "alais",
+                  "password": "$2b$10$mpxIkBn.tJCzkfSvIvUyo.y5F4dbhmbeVrwJtrMQJaRb7eQQalzH6",
+                  "createdAt": "2024-02-06",
+                  "updatedAt": "2024-02-06"
+              },
+              {
+                  "id": 3,
+                  "username": "john",
+                  "password": "$2b$10$C7KYJCQK9uxCYQ22ZOFupuGcP.hvl1TuTsjj74ka4HM3kLPwBx.sC",
+                  "createdAt": "2024-02-06",
+                  "updatedAt": "2024-02-06"
+              },
+              {
+                  "id": 4,
+                  "username": "ibhra",
+                  "password": "$2b$10$1GQy4bKYTNm699NdQjWVbO.Ulkn9ukmWVw92ANnnEaeqmeFFWi42K",
+                  "createdAt": "2024-02-06",
+                  "updatedAt": "2024-02-06"
+              }
+          ]
+    responseFields: {}
+  - uri: /user/login
+    httpMethods:
+      - POST
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
+  - uri: /user/secure-route
+    httpMethods:
+      - GET
+    metadata:
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses:
+      - status: 500
+        description: ''
+        headers:
+          content-security-policy: default-src 'none'
+          x-content-type-options: nosniff
+          content-type: text/html; charset=utf-8
+        content: >
+          <!DOCTYPE html>
+
+          <html lang="en">
+
+          <head>
+
+          <meta charset="utf-8">
+
+          <title>Error</title>
+
+          </head>
+
+          <body>
+
+          <pre>TypeError: Cannot read properties of undefined (reading
+          &#39;split&#39;)<br> &nbsp; &nbsp;at module.exports (D:\MindGrowth
+          Backend\api\middleware\authenticate.js:5:43)<br> &nbsp; &nbsp;at
+          Layer.handle [as handle_request] (D:\MindGrowth
+          Backend\node_modules\express\lib\router\layer.js:95:5)<br> &nbsp;
+          &nbsp;at next (D:\MindGrowth
+          Backend\node_modules\express\lib\router\route.js:144:13)<br> &nbsp;
+          &nbsp;at Route.dispatch (D:\MindGrowth
+          Backend\node_modules\express\lib\router\route.js:114:3)<br> &nbsp;
+          &nbsp;at Layer.handle [as handle_request] (D:\MindGrowth
+          Backend\node_modules\express\lib\router\layer.js:95:5)<br> &nbsp;
+          &nbsp;at D:\MindGrowth
+          Backend\node_modules\express\lib\router\index.js:284:15<br> &nbsp;
+          &nbsp;at Function.process_params (D:\MindGrowth
+          Backend\node_modules\express\lib\router\index.js:346:12)<br> &nbsp;
+          &nbsp;at next (D:\MindGrowth
+          Backend\node_modules\express\lib\router\index.js:280:10)<br> &nbsp;
+          &nbsp;at Function.handle (D:\MindGrowth
+          Backend\node_modules\express\lib\router\index.js:175:3)<br> &nbsp;
+          &nbsp;at router (D:\MindGrowth
+          Backend\node_modules\express\lib\router\index.js:47:12)</pre>
+
+          </body>
+
+          </html>
+    responseFields: {}
